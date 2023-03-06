@@ -7,5 +7,5 @@ puts "----------"
 # Your code goes here ...
 @store1 = Store.find_by(id: 1)
 @store2 = Store.find_by(id: 2)
-@store1.annual_revenue = 22000
+@store1.annual_revenue = 2200000
 @store1.save
