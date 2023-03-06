@@ -13,11 +13,11 @@ Store.create(name: 'Yaletown', annual_revenue: 430000, mens_apparel: true, women
 
 @mens_stores = Store.where(mens_apparel: true, womens_apparel: false)
 
-# @mens_stores.each do |store|
-#   puts "Store name: #{store.name}; Revenue: $#{store.annual_revenue}"
-# end
-
-@women_stores_less_1m = Store.where(womens_apparel: true).where('annual_revenue < ?', 1000000)
-@women_stores_less_1m.each do |store|
+@mens_stores.each do |store|
   puts "Store name: #{store.name}; Revenue: $#{store.annual_revenue}"
 end
+
+@women_stores_less_1m = Store.where(womens_apparel: true).where('annual_revenue < ?', 1000000)
+# @women_stores_less_1m.each do |store|
+#   puts "Store name: #{store.name}; Revenue: $#{store.annual_revenue}"
+# end
